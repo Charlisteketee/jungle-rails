@@ -11,9 +11,9 @@
     <a class="navbar-brand" href="<%= root_path %>">Jungle</a>
 
     <% if current_user %>
-      Signed in as <%= current_user.first_name %> | <%= link_to "Logout", logout_path %>
+      Signed in as <%= current_user.first_name %> | <%= link_to "Logout", logout_path, class: "text-danger" %>
     <% else %>
-      <%= link_to 'Login', login_path %> | <%= link_to 'Signup', signup_path %>
+      <%= link_to 'Login', login_path, class: "text-danger" %> | <%= link_to 'Signup', signup_path, class: "text-danger" %>
     <% end %>
 
     <button
